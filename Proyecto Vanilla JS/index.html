@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- INICIO SECCION HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/estilosIndex.css" type="text/css">
+    <link rel="icon" href="css/logo.png" type="image/png">
+  </head>
+<!-- FIN SECCION HEAD-->
+
+<!-- INICIO SECCION BODY-->
+<body>
+  <div id="contenedorTotal"><!-- INICIO DIV CONTENEDORTOTAL -->
+      <div id="cabezal" class="clearfix"><!-- INICIO DIV CABEZAL-->
+        <img id="logo" src="https://develotion.com/assets/img/logo.jpg" alt="logo"/>
+                    
+        <div id="auxLanding"><!-- INICIO DIV AUX --> 
+          <br/><br/><br/><br/> <!-- O MODIFICAR EN CSS -->
+          <input type="button" id="btnMuestroRegistro" value="Registrarse">  
+          <input type="button" id="btnMuestroIngresar" value="Ingresar">
+        </div><!-- FIN DIV AUX -->
+
+        <div id="pagPrincipal"><!-- INICIO DIV PAGPRINCIPAL-->
+          <br/><br/><br/><br/> <!-- O MODIFICAR EN CSS -->
+          <input type="button" id="btnPaginaPrincipal" value="Pagina principal">
+        </div><!-- FIN DIV PAGPRINCIPAL -->
+
+        <div id="navAlumno"><!-- DIV NAVALUMNOS-->
+          <ul class="nav">
+            <li>
+              <a id="aEjAlumnos">Ejercicios</a>
+            </li>
+            <li>
+              <a id="aEntAlumnos">Entregas</a>
+            </li>
+            <li>
+              <a id="aEstAlumnos">Estadísticas</a>
+            </li>
+          </ul>  
+        </div><!-- DIV NAVALUMNOS-->
+        
+        <div id="navDocente"><!-- INICIO NAVDOCENTE-->
+          <ul class="nav">
+            <li>
+              <a id="aAsignarNivel">Asignar Nivel</a>
+            </li>
+            <li>
+              <a id="aPlantearEje">Plantear Ejercicios</a>
+            </li>
+            <li>
+              <a id="aDevoluciones">Devoluciones</a>
+            </li>
+            <li>
+              <a id="aEstDocentes">Ver Estadísticas</a>
+            </li> 
+          </ul>
+        </div><!-- FIN NAVDOCENTE-->
+        
+        <div id="auxUsuario"><!-- INICIO DIV AUXUSUARIO -->
+          <br/><br/><br/>
+          <input type="button" id="btnCierroSesion" value="Cerrar sesión">
+        </div><!-- FIN DIV AUX -->
+      </div><!-- FIN DIV CABEZAL -->
+      
+        <div id="bodyHome"><!-- INICIO DIV BODYHOME -->
+          <h1 id="h1TitBienvenida" style="text-align: center; font-family: Jost, sans-serif;">Bienvenidos a Escuela De Música</h1>
+          <img src="css/InstrumentosSFondo.png" alt="Escuela De Música" style="position: absolute; left: 30%;">
+        </div><!-- FIN DIV BODYHOME -->
+
+        <div id="pie"><!-- INICIO DIV PIE-->
+          <a href="https://www.ort.edu.uy">Volver a ORT</a>
+        </div><!-- FIN PIE -->
+  </div><!--FIN DIV CONTENEDORTOTAL -->
+
+<!-- ##################################  DISTINTAS SECCIONES DE LA PAGINA #############################################-->
+    
+<!-- ###############################################    REGISTRO    #####################################################-->    
+    <div id="registro"> <!-- INICIO DIV REGISTRO -->
+        <h1>Complete todos los campos para registrarse</h1>
+        <label >Nombre: </label> 
+        <input type="text" id="txtNombre" class="interfazUsuario" placeholder="Ingrese nombre"/><span id="errorNombre" class="error"></span> <br>
+        <label >Nombre de usuario: </label>
+        <input type="text" id="txtNombreUsuario" class="interfazUsuario" placeholder="Ingrese nombre de usuario"/><span id="errorNombreUsuario" class="error"></span> <br>
+        <label >Contraseña: </label> 
+        <input type="text" id="txtContraseña" class="interfazUsuario" placeholder="Ingrese contraseña"/><span id="errorContrasena" class="error"></span> <br>
+        
+        <label for="selPerfil">Perfil: </label>
+        <select id="selPerfil">
+          <option value="-1"> Elegir perfil </option> 
+          <option value="1"> Docente </option> 
+          <option value="2"> Alumno </option>
+        </select><span id="errorPerfil" class="error"></span>
+      <br/>
+      <div id="selDocentesRegistro"></div>
+        <input type="button" id="btnRegistrarse" value="Registrarse">
+    </div><!-- FIN DIV REGISTRO -->
+
+<!-- ###############################################  FIN  REGISTRO    ###################################################-->
+
+<!-- ###############################################   INGRESAR    ########################################################-->
+      
+      <div id="ingreso"><!-- INICIO DIV INGRESO -->
+        <h1>Complete los campos para ingresar</h1>
+        <label >Usuario: </label> <input type="text" id="txtUsuario" class="interfazUsuario" placeholder="Ingrese nombre de usuario"><span id="errorIngresarUsuario" class="error"></span> <br>
+        <label >Contraseña: </label> <input type="text" class="interfazUsuario" id="txtClave" placeholder="Ingrese contraseña"><span id="errorIngresarContrasena" class="error"></span> <br>
+        <input type="button" id="btnAcceder" value="Acceder">
+      </div><!-- FIN DIV INGRESO -->
+<!-- ###############################################   FIN INGRESAR    ########################################################-->
+
+<!-- ###############################################    ALUMNO    #########################################################-->
+      
+      <div id="homeAlumno"><!-- INICIO DIV HOMEALUMNO -->      
+        <hr>
+        <div id="divBuscadorEj"> <!-- DIV PARA MOSTRAR BUSCADOR DE EJ-->
+          <input type="text" id="buscadorDeEjercicios" placeholder="Ingrese un criterio de busqueda" class="interfazUsuario"><span id="errorBuscadorDeEjercicios" class="error"></span><br/> 
+          <input type="button" id="buscaEjAlumno" value="Buscar">
+        </div>
+        <div id="divEjalumnos" ><!-- INICIO DIV divEjalumnos -->
+        </div><!-- FIN DIV divEjalumnos -->
+      
+        <br/><br/>
+        <div id="divEjElegido" class="mensajeUsuario"> <!-- DIV PARA MOSTRAR EJERCICIO ELEGIDO DE LA TABLA (quiero meter aca todo)-->
+        </div>
+        <div id="divEntAlumno"></div><!-- DIV PARA MOSTRAR ENTREGAS ALUMNO-->
+        <div id="divEstAlumnos" style="font-weight: bold; border-style: double; text-align: center;"></div><!-- INICIO DIV DIVESTALUMNOS -->
+        
+        
+      </div><!-- FIN DIV HOMEALUMNO -->
+
+<!-- ###############################################    FIN ALUMNO    #########################################################-->
+      
+<!-- ###############################################      DOCENTE      #########################################################-->
+
+  <div id="homeDocente"><!-- INICIDO DIV HOMEDOCENTE-->
+      <br/><hr/>
+    
+    <div id="divAsignarNivel"><!-- INICIO DIV ASIGNARNIVEL -->
+      <label>Ingresar nombre de alumno:</label>
+      <input type="text" id="txtNomAlumno" class="interfazUsuario" placeholder="Ingrese Nombre"/>
+      <select id="selNivel">
+        <option value="inicial"> Inicial </option> 
+        <option value="intermedio"> Intermedio </option> 
+        <option value="avanzado"> Avanzado </option> 
+      </select>
+      <span id="errorAsignarNivel"class="error"></span>
+      <br/>
+      <input type="button" id="btnAsignarNivel" value="Asignar Nivel"/> 
+      <input type="button" id="btnMostrarXDocente" value="Mostrar Alumnos"/> 
+      <span id="errorMostrarAlumnosXDocente" class="error"></span><br>
+      <p id="pAsignarNivel" class="mensajeUsuario"> </p>
+      <div id="divMostrarTablaXDocente"></div><!-- PARA MOSTRAR TABLA DE ALUMNOS DEL DOCENTE Y SU NIVEL-->
+      <br>
+    </div><!-- FIN DIV ASIGNARNIVEL -->
+
+    <div id="divPlantearEje"><!-- INICIO DIV DIVPLANTEAREJE-->
+      <br>
+      <label for="selNivelEjercicio">Seleccione el nivel: </label>
+      <select id="selNivelEjercicio">
+        <option value="Inicial">Inicial</option>
+        <option value="Intermedio">Intermedio</option>
+        <option value="Avanzado">Avanzado</option>
+      </select><span id="errorNivelEj"></span><br/>
+      <label>Ingresar un título:</label> 
+      <input type="text" id="txtTitulo" class="interfazUsuario" placeholder="Ingrese Título"/><span id="errorTituloEj"class="error"></span> <br>
+      <label>Ingresar una descripción: </label>
+      <input type="text" id="txtDesc" class="interfazUsuario" placeholder="Ingrese Descripción"/><span id="errorDescEj"class="error"></span><br>
+      <label for="filImg">Imagen descriptiva: </label>
+      <input type="file" id="filImg" class="interfazUsuario"/><span id="errorImgEj"class="error"></span><br>
+      <br>
+      <input type="button" id="subirEjercicio" value="Subir Ejercicio"/> <br>
+      <p id="pTareaSubida" class="mensajeUsuario"></p>
+    </div><!-- FIN DIV DIVPLANTEARJE -->
+   
+    <div id="divDevoluciones"><!-- INICIO DIV DIVDEVOLUCIONES -->
+        <input type="button" id="btnMostrarEntregas" value="Mostrar entregas"/><br/>
+        <div id="divEntregas"></div> <!-- DIV PARA MOSTRAR LA TABLA DE ENTREGAS SIN DEVOLUCION-->
+    </div><!-- FIN DIV DIVDEVOLUCIONES-->
+    
+      
+    <div id="divEstadisticas"><!-- INICIO DIV DIVESTADISTICAS -->
+      <h1 style="text-align: center; font-family: 'Jost', sans-serif; ">VISUALIZAR ESTADISTICAS</h2> <br>
+        <label for="btnMostrarAlumno"style="font-weight: bold;">Alumno con mas ejercicios resueltos sin discriminar nivel</label>
+        <input type="button" id="btnMostrarAlumno" value="Ver"/>
+          <p id="pMostrarAlumnoQueMasResolvio" style="font-weight: bold; border-style: double;" class="mensajeUsuario"> </p>
+        <hr><br>
+
+      <div id="divListaDeAlumnos"> <!-- INICIO divListaAlumnos  --> 
+        <select id="selEstAlumnos" class="mensajeUsuario">
+        </select>
+        <input type="button" id="btnEjexNivel" value="Ver"/>
+        <label  for="btnEjexNivel"style="font-weight: bold;">Ejercicios planteados para su nivel</label>
+        <p id="pMostrarEstAlumnos" style="font-weight: bold; border-style: double;" class="mensajeUsuario"></p>
+      </div> <!-- FIN divListaAlumnos  -->
+        <br>
+        <!-- <div id="divMostrarEjePlanteados" style="font-weight: bold; border-style: double;"></div>-->
+        <hr>
+        <label for="btnEjeResueltos" style="font-weight: bold;">Cantidad de entregas</label>
+        <input type="button" id="btnEjeResueltos" value="Ver"/> <br/><br/>
+        <div id="divMostrarResueltos" style="font-weight: bold; border-style: double; text-align: center;" class="mensajeUsuario"></div>
+    </div><!-- FIN DIV DIVESTADISTICAS -->
+  </div><!-- FIN DIV HOMEDOCENTE -->
+<!-- ###############################################    FIN DOCENTE    ######################################################-->
+
+<script src="js/clasesObjetos.js" type="text/javascript"></script>
+<script src="js/codigo.js" type="text/javascript"></script>
+<script src="js/manejoUi.js" type="text/javascript"></script> <!-- SI CAMBIAMOS EL ORDEN EN QUE LINKEA LOS SCRIPTS EXPLOTA TODO -->
+<script src="js/precarga.js" type="text/javascript"></script>
+</body><!-- FIN SECCION BODY-->
+</html> 
